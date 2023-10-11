@@ -15,13 +15,14 @@
         const valore = taskInput.value;
         const newButton = document.createElement("button");
         newButton.id="deleteTask";
-        newButton.innerText="Cancella questa task";
+        newButton.innerHTML="<i class=\"fas fa-minus\"></i>";
         const ul = document.createElement("ul");
         const li = document.createElement("li");
 
         newButton.onclick = function (e) {
             const clicked = e.target;
-            clicked.parentNode.remove();
+            const bt = clicked.parentNode;
+            bt.parentNode.remove();
         }
 
         li.innerText = valore;
